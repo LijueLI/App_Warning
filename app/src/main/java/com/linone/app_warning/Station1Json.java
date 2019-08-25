@@ -11,27 +11,28 @@ public class Station1Json {
     private String entry_id;
 
     @SerializedName("field1")
-    private String VminMax;
+    private double VminMax;
 
     @SerializedName("field2")
-    private String XminAvg;
+    private double XminAvg;
 
     @SerializedName("field3")
-    private String Temp;
+    private double Temp;
 
     @SerializedName("field4")
-    private String Humi;
+    private double Humi;
 
     @SerializedName("field5")
-    private String BdTemp;
+    private double BdTemp;
 
     @SerializedName("field6")
-    private String Volt;
+    private double Volt;
 
     @SerializedName("field7")
     private String Warning;
 
-    public Station1Json(String created_at, String entry_id, String vminMax, String xminAvg, String temp, String humi, String bdTemp, String volt, String warning) {
+
+    public Station1Json(String created_at, String entry_id, double vminMax, double xminAvg, double temp, double humi, double bdTemp, double volt, String warning) {
         this.created_at = created_at;
         this.entry_id = entry_id;
         VminMax = vminMax;
@@ -43,19 +44,19 @@ public class Station1Json {
         Warning = warning;
     }
 
-    public String getBdTemp() {
+    public double getBdTemp() {
         return BdTemp;
     }
 
-    public void setBdTemp(String bdTemp) {
+    public void setBdTemp(double bdTemp) {
         BdTemp = bdTemp;
     }
 
-    public String getVolt() {
+    public double getVolt() {
         return Volt;
     }
 
-    public void setVolt(String volt) {
+    public void setVolt(double volt) {
         Volt = volt;
     }
 
@@ -75,35 +76,35 @@ public class Station1Json {
         this.entry_id = entry_id;
     }
 
-    public String getVminMax() {
+    public double getVminMax() {
         return VminMax;
     }
 
-    public void setVminMax(String vminMax) {
+    public void setVminMax(double vminMax) {
         VminMax = vminMax;
     }
 
-    public String getXminAvg() {
+    public double getXminAvg() {
         return XminAvg;
     }
 
-    public void setXminAvg(String xminAvg) {
+    public void setXminAvg(double xminAvg) {
         XminAvg = xminAvg;
     }
 
-    public String getTemp() {
+    public double getTemp() {
         return Temp;
     }
 
-    public void setTemp(String temp) {
+    public void setTemp(double temp) {
         Temp = temp;
     }
 
-    public String getHumi() {
+    public double getHumi() {
         return Humi;
     }
 
-    public void setHumi(String humi) {
+    public void setHumi(double humi) {
         Humi = humi;
     }
 

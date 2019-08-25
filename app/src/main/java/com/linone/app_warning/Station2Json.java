@@ -10,24 +10,40 @@ public class Station2Json {
     private String entry_id;
 
     @SerializedName("field1")
-    private String WaterLevel;
+    private double WaterLevel;
 
     @SerializedName("field2")
-    private String BdTemp;
+    private double BdTemp;
 
     @SerializedName("field3")
-    private String Volt;
+    private double Volt;
 
     @SerializedName("field4")
     private String Warning;
 
-    public Station2Json(String created_at, String entry_id, String waterLevel, String bdTemp, String volt, String warning) {
+    public Station2Json(String created_at, String entry_id, double waterLevel, double bdTemp, double volt, String warning) {
         this.created_at = created_at;
         this.entry_id = entry_id;
         WaterLevel = waterLevel;
         BdTemp = bdTemp;
         Volt = volt;
         Warning = warning;
+    }
+
+    public double getBdTemp() {
+        return BdTemp;
+    }
+
+    public void setBdTemp(double bdTemp) {
+        BdTemp = bdTemp;
+    }
+
+    public double getVolt() {
+        return Volt;
+    }
+
+    public void setVolt(double volt) {
+        Volt = volt;
     }
 
     public String getCreated_at() {
@@ -46,11 +62,11 @@ public class Station2Json {
         this.entry_id = entry_id;
     }
 
-    public String getWaterLevel() {
+    public double getWaterLevel() {
         return WaterLevel;
     }
 
-    public void setWaterLevel(String waterLevel) {
+    public void setWaterLevel(double waterLevel) {
         WaterLevel = waterLevel;
     }
 
@@ -60,21 +76,5 @@ public class Station2Json {
 
     public void setWarning(String warning) {
         Warning = warning;
-    }
-
-    public String getBdTemp() {
-        return BdTemp;
-    }
-
-    public void setBdTemp(String bdTemp) {
-        BdTemp = bdTemp;
-    }
-
-    public String getVolt() {
-        return Volt;
-    }
-
-    public void setVolt(String volt) {
-        Volt = volt;
     }
 }

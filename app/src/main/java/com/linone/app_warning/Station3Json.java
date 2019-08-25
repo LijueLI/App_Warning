@@ -11,24 +11,24 @@ public class Station3Json {
     private String entry_id;
 
     @SerializedName("field1")
-    private String WaterLevel;
+    private double WaterLevel;
 
     @SerializedName("field2")
-    private String Rainfall_1hour;
+    private double Rainfall_1hour;
 
     @SerializedName("field3")
-    private String Rainfall_24hour;
+    private double Rainfall_24hour;
 
     @SerializedName("field4")
-    private String Temperature;
+    private double Temperature;
 
     @SerializedName("field5")
-    private String Voltage;
+    private double Voltage;
 
     @SerializedName("field6")
     private String Warning;
 
-    public Station3Json(String created_at, String entry_id, String waterLevel, String rainfall_1hour, String rainfall_24hour, String temperature, String voltage, String warning) {
+    public Station3Json(String created_at, String entry_id, double waterLevel, double rainfall_1hour, double rainfall_24hour, double temperature, double voltage, String warning) {
         this.created_at = created_at;
         this.entry_id = entry_id;
         WaterLevel = waterLevel;
@@ -37,6 +37,22 @@ public class Station3Json {
         Temperature = temperature;
         Voltage = voltage;
         Warning = warning;
+    }
+
+    public double getTemperature() {
+        return Temperature;
+    }
+
+    public void setTemperatrue(double temperature) {
+        Temperature = temperature;
+    }
+
+    public double getVoltage() {
+        return Voltage;
+    }
+
+    public void setVoltage(double voltage) {
+        Voltage = voltage;
     }
 
     public String getCreated_at() {
@@ -55,44 +71,28 @@ public class Station3Json {
         this.entry_id = entry_id;
     }
 
-    public String getWaterLevel() {
+    public double getWaterLevel() {
         return WaterLevel;
     }
 
-    public void setWaterLevel(String waterLevel) {
+    public void setWaterLevel(double waterLevel) {
         WaterLevel = waterLevel;
     }
 
-    public String getRainfall_1hour() {
+    public double getRainfall_1hour() {
         return Rainfall_1hour;
     }
 
-    public void setRainfall_1hour(String rainfall_1hour) {
+    public void setRainfall_1hour(double rainfall_1hour) {
         Rainfall_1hour = rainfall_1hour;
     }
 
-    public String getRainfall_24hour() {
+    public double getRainfall_24hour() {
         return Rainfall_24hour;
     }
 
-    public void setRainfall_24hour(String rainfall_24hour) {
+    public void setRainfall_24hour(double rainfall_24hour) {
         Rainfall_24hour = rainfall_24hour;
-    }
-
-    public String getTemperature() {
-        return Temperature;
-    }
-
-    public void setTemperature(String temperature) {
-        Temperature = temperature;
-    }
-
-    public String getVoltage() {
-        return Voltage;
-    }
-
-    public void setVoltage(String voltage) {
-        Voltage = voltage;
     }
 
     public String getWarning() {
